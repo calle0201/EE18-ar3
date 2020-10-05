@@ -3,79 +3,55 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>array</title>
+    <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-    <?php
-    //array med länder
-    $länder = ["svergie", "norge", "finland"];
-   foreach ($länder as $land) {
-       echo "<p>$land</p>";
-   }
 
-   //associativ array
-$elever = [];
-$elever["Vikotr"] = "guitar";
-$elever["Lukas"] = "Keyboard";
-$elever["Olle"] = "Munspel";
+    <div class="container">
+        <h1>namnordning</h1>
+        <form action="#" method="post">
+            <label for="name">name1</label>
+            <input class="form-control" name="name[]" id="name" type="text">
+            <br>
+            <label for="name">name2</label>
+            <input class="form-control" name="name[]" id="name" type="text">
+            <br>
+          
+            <label for="name">name3</label>
+            <input class="form-control" name="name[]" id="name" type="text">
+            <br>
+            <label for="name">name4</label>
+            <input class="form-control" name="name[]" id="name" type="text">
+            <br>
+            <label for="name">name5</label>
+            <input class="form-control" name="name[]" id="name" type="text">
+            <br>
+          
+      
+            <br>
+            <button type="submit" class="btn btn-primary">skicka</button>
 
-//skriv ut array
-foreach ($elever as $elev => $instrument ) {
-    echo "<p>$elev</p>";
-    echo "<p>$instrument</p>";
+
+
+        </form>
+        <div>
+            <?php
+                if (isset($_POST["name"]  )) {
+                    $names = $_POST["name"];
+                    sort($names);
+                    foreach ($names as $key => $manynames) {
+                        echo "<p>$manynames</p>";
+                    }
+
+                    
+
+
+
+
 }
-/*
- <table>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
-</table> 
-*/
-echo "<table>";
-echo "<tr>";
-echo "<td>John</td>";
-echo "<td>Doe</td>";
-echo "</tr>";
-echo "</table>";
-
-
-echo "<table>";
-echo"<tr>" ;
-echo"<th>name</th>";
-echo"<th>instrument</th>";
-echo"</tr>";
-foreach ($elever as $elev => $instrument) {
-    echo "<tr>";
-    echo "<td>$elev</td>";
-    echo "<td>$instrument</td>";
-    echo "</tr>";
-}
-echo "</table>";
-
-$mening = "Vi och våra partners bearbetar personuppgifter såsom IP-adress, unikt ID och browsingdata. Vissa partner begär inte ditt samtycke till att behandla dina data, utan de litar på sitt legitima affärsintresse. Visa vår lista över partners för att se de syften som de tror att de har ett legitimt intresse för och hur du kan göra invändningar mot det.";
-
-
-$allaOrd = explode(" ", $mening);
-
-echo "<table>";
-foreach ($allaOrd as $numer=> $ord) {
-    $numer ++;
-    echo "<tr>";
-    echo "<td>$numer</td>";
-    echo "<td>$ord</td>";
-    echo "</tr>";
-}
-echo "</table>";
-    ?>
-
-
-
-
-</body>
+            ?>
+    </body>
 </html>
