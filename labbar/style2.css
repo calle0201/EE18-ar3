@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F9F6EB;
+}
+.kontainer {
+    width: 600px;
+    padding: 2em;
+    margin: 3em auto;
+    background: #fff;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 12px #f0e9d1;
+    color: #4e4e4e;
+}
+h1, h2, h3 {
+    color: #9c813d;
+}
+h1, h2, h3, p {
+    margin: 0.5em 0;
+}
+h3 {
+    margin-top: 2em;
+}
+form {
+    padding: 1em;
+    margin: 2em 0;
+    background: #000;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+}
+table {
+    margin: 2em 0;
+    font-size: 0.8em;
+}
+table th {
+    background: #305A85;
+    color: #FFF;
+}

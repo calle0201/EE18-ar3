@@ -1,0 +1,7 @@
+Ge exempel på bra praxis inom webbserverprogrammering.
+Att ha tydliga namn om vad saker ska göra gärna hela nanmn och inte förkortningar där det går
+
+
+Beskriv vilka tekniker som krävs för att en webbapplikation byggd på PHP skall fungera. 
+Man måste antingen använda en post eller get i din html kod och en $_post eller $_get i din php så du kan ta imot informationen som skickas eller ska skickas till html dokumentet.
+
