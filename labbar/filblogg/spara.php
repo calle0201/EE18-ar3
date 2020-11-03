@@ -24,11 +24,18 @@
         <button class="btn btn-primary">Spara inlägg</button>
     </form>
     <?php
-    if (isset($_POST['inlagg'])) {
+   /*  if (isset($_POST['inlagg'])) {
+       
+        $texten = $_POST["inlagg"];  */
+
+        //rensa från hot
+$texten = filter_input(INPUT_POST,"inlagg", FILTER_SANITIZE_STRING);
+
+if ($texten) {
+
         $filnamn = "blogg.txt";
-        $texten = $_POST["inlagg"]; 
         $tidpunkt = date('l j F Y h:i:s');
-        $handtag = fopen($filnamn, "a");
+        
         // Är filens skrivbar?
         if (is_writable($filnamn)) {
             # code...
@@ -38,8 +45,20 @@
       $ersattMedBr = str_replace("\n", "<br>", $texten);
         //$texten = ($_POST['inlagg'], false);
     
-        // Skriv text i textfilen
-        fwrite($handtag, "<p>$tidpunkt<br>$ersattMedBr</p>\n");
+        
+        
+        
+        if (!$handtag = fopen($filnamn, 'a')) {
+            echo "kan inte att öppna ($filnamn)";
+            exit;
+       } else { 
+        
+       }
+       // Skriv text i textfilen
+       if (fwrite($handtag, "<p>$tidpunkt<br>$ersattMedBr</p>\n") === FALSE) {
+        echo "kan inte skirva till ($filename)";
+        exit;
+    }
     
         // Stäng anslutningen till textfilen
         fclose($handtag);
@@ -48,7 +67,7 @@
     } else {
         echo "<p>filen går inte att skriva till</p>";
     }
-    } 
+}  
     ?>
     </div>
 </body>

@@ -1,0 +1,56 @@
+id  	name	description	bookable	doublebook
+559	410/Dali	410/Dali	1	0
+558	415/Warhol	415/Warhol	1	0
+557	417/Kubrick	417/Kubrick	1	0
+1263	418-studio/Kraftwerk	418-studio/Kraftwerk	1	1
+484	419-studio/Coppola	419-studio/Coppola	1	1
+551	429/Saville	429/Saville	1	0
+1264	430	430	0	1
+1895	432-grupprum/Bowie	432-grupprum/Bowie	1	0
+566	433/Garbo	433/Garbo	1	0
+567	434/Miller	434/Miller	1	0
+569	505/Postel	505/Postel	1	0
+1869	506-grupprum/King	506-grupprum/King	0	0
+573	509/Kahn	509/Kahn	1	0
+575	511/Samus	511/Samus	1	0
+2388	512	512/Grupprum	1	0
+577	513/Ericsson	513/Ericsson	1	0
+2266	515	515/Personalrum	0	0
+1782	522	522	0	0
+582	523/Allen	523/Allen	1	0
+584	525/Estrin	525/Estrin	1	0
+585	526/Pearlman	526/Pearlman	1	0
+589	606/Newton	606/Newton	1	0
+590	607/Gates	607/Gates	1	1
+591	607A-grupprum/Jobs	607A-grupprum/Jobs	1	0
+593	609/Hopper	609/Hopper	1	1
+594	610-grupprum/Arkimedes	610-grupprum/Arkimedes	1	0
+595	611/Makerspace	611/Makerspace	0	0
+1261	612-grupprum/Da Vinci	612-grupprum/Da Vinci	1	0
+600	620A-labbsal/Cerf	620A-labbsal/Cerf	1	0
+601	620B-labbsal/Silicon Valley	620B-labbsal/Silicon Valley	0	0
+602	622/Curie	622/Curie	1	0
+604	624-labbsal/Ohm	624-labbsal/Ohm	1	0
+1789	A1 (Mattesal)	A1 (Mattesal)	1	1
+1953	A10-grupprum	A10-grupprum	1	1
+1791	A2	A2	1	1
+1825	A3 (Mattesal)	A3 (Mattesal)	1	1
+1875	A4 (FysikLabb)	A4 (FysikLabb)	1	1
+1876	A5 (KemiLabb)	A5 (KemiLabb)	1	1
+1793	A6	A6	1	1
+1815	A7	A7	1	1
+1814	A8	A8	1	1
+1952	A9-grupprum	A9-grupprum	1	1
+1811	Annan plats	Annan plats	0	1
+1446	APL	APL	0	1
+1657	Biblioteket	Biblioteket	0	1
+839	Dr Kristinas sal	Dr Kristinas sal	0	0
+1084	Handels	Handels	0	1
+1788	Idrottshall	Idrottshall	0	1
+1262	Musikhuset	Musikhuset	0	1
+605	Nordic Wellness	Nordic Wellness	0	0
+2394	Provsk�rmsvagn 2 Annexet	Provsk�rmsvagn 2 Annexet	1	0
+1973	Provsk�rmsvagn 410	Provsk�rmsvagn 410	1	0
+1971	Provsk�rmsvagn 505	Provsk�rmsvagn 505	1	0
+1972	Provsk�rmsvagn 606	Provsk�rmsvagn 606	1	0
+1974	Provsk�rmsvagn Annexet 1	Provsk�rmsvagn Annexet	1	0
