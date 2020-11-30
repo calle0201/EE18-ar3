@@ -22,9 +22,7 @@
         if (isset($_POST["filnamn"]  )) {
             $filnamn = $_POST["filnamn"];
             // Läs in texten från formuläret
-            $rader = file($filnamn);
-           
-               
+            $rader = file($filnamn);    
             if (is_readable($filnamn)) {
                 echo "<table class=\"table table-striped\">";
                 echo "<tr><th>Namn</th><th>Gata</th><th>Postnr</th><th>Postort</th></tr>";
@@ -32,7 +30,6 @@
                 foreach ($rader as $key => $del) {
                    $bla = explode(', ',$del);
                     echo "<tr><td>$bla[0]</td><td>$bla[1]</td><td>$bla[2]</td><td>$bla[3]</td></tr>";
-                    
                 }
               
                 echo "</table>";

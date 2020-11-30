@@ -22,7 +22,7 @@
         continue;
     }
 
-    //gör div boxer och stoppar namn och bild i den
+    //gör div boxer och stoppar namn och bild i
     echo "<div class='bild'>";
        echo "<img src='$repo/$resultat[$key]'  >";
       echo "<span>$resultat[$key]</span>";
