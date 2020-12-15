@@ -15,8 +15,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 body {
     background: #F9F6EB;
 }
-.kontainer {
-    width: 600px;
+.container {
+    width: 700px;
     padding: 2em;
     margin: 3em auto;
     background: #fff;
@@ -26,6 +26,7 @@ body {
     box-shadow: 0 0 12px #f0e9d1;
     color: #4e4e4e;
 }
+
 
 h1, h2, h3 {
     color: #9c813d;
@@ -83,7 +84,7 @@ table th, table td {
 }
 table th {
     background: #305A85;
-    color: #FFF;
+    color: rgb(255, 255, 255);
 }
 table tr:nth-child(even) {
     background: #E6F2F8;
@@ -94,3 +95,10 @@ table tr:nth-child(odd) {
 table .fa {
     color: #55a5d2;
 }
+.post {
+    padding: 2em;
+
+    background: rgb(255, 189, 47);
+    font-family: 'Open Sans', sans-serif;
+    color: #4e4e4e;
+}   

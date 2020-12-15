@@ -7,9 +7,9 @@
 */
 
 $user = "calle";
-$db = "calle";
+$db = "labbar";
 $host = "localhost";
-$pass = "DpELLuMrHeZRdWnS";
+$pass = "vABogbya48SpaQoP";
 
 //log in to the sql SERVER
 

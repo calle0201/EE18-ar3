@@ -1,0 +1,4 @@
+AuthName "admin
+AuthType "Basic"
+require valid-user
+AuthUserFile  /etc/apache2/.htpasswd
