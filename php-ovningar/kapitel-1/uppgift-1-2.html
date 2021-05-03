@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontaktformulär</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kontaktformulär</h1>
+        <form action="taemot.php" method="POST">
+            <label for="namn">Ange namn</label>
+            <input id="namn" class="form-control" type="text" name="namn">
+            <label for="epost">Ange epost</label>
+            <input id="epost" class="form-control" type="email" name="epost">
+            <label for="mobil">Ange mobil</label>
+            <input id="mobil" class="form-control" type="text" name="mobil">
+
+            <label>Vill ha nyhetsbrav</label>
+            <div>
+                <input type="checkbox" name="nbrev" value="nyhetsbrev"> nyhetsbrev
+            </div>
+
+            <label>Vill bli kontaktad</label>
+            <div>
+                <input type="radio" name="roll" value="epost"> epost
+                <input type="radio" name="roll" value="mobil"> mobil
+            </div>
+
+            <button type="submit" class="btn btn-primary">Skicka</button>
+        </form>
+    </div>
+</body>
+</html>

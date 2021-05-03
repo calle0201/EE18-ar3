@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vecka.nu</title>
+    <meta name="description" content="vecka.nu ger dig aktuellt veckonummer, utan några konstigheter!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vecka.nu/">
+    <meta property="og:image" content="https://vecka.nu/image/1200/630">
+    <meta property="og:title" content="vecka.nu -- vecka 42">
+    <meta property="og:description" content="vecka.nu ger dig aktuellt veckonummer, utan några konstigheter!"
+    <meta property="fb:app_id" content="1620353601340639">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://vecka.nu/image/900/450">
+    <meta name="msapplication-square70x70logo" content="https://vecka.nu/image/70/70">
+    <meta name="msapplication-square150x150logo" content="https://vecka.nu/image/150/150">
+    <meta name="msapplication-wide310x150logo" content="https://vecka.nu/image/310/150">
+    <meta name="msapplication-square310x310logo" content="https://vecka.nu/image/310/310">
+    <link id="favicon" rel="icon" type="image/png" href="favicon.png">
+    <style>
+        html, body { height: 100%; background-color: #90c0de; overflow: hidden; }
+        time {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: -110px 0 0 0;
+            height: 220px;
+            text-align: center;
+            color: #1c7bb7;
+            font-family: Arial, serif;
+            font-size: 260px;
+            line-height: 227px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <time datetime="2020-W42">42</time>
+
+    <script>
+        (function () {
+            document.head = document.head || document.getElementsByTagName('head')[0];
+            var canvas = document.createElement('canvas'),
+                img = document.createElement('img'),
+                oldLink = document.getElementById('favicon'),
+                link = oldLink.cloneNode(true),
+                week = 42;
+            if (canvas.getContext) {
+                canvas.height = canvas.width = 16;
+                var ctx = canvas.getContext('2d'),
+                    textWidth = ctx.measureText(week).width;
+                img.onload = function () {
+                    ctx.drawImage(this, 0, 0);
+                    ctx.font = 'bold 10px "helvetica", sans-serif';
+                    ctx.fillStyle = '#066EB0';
+                    ctx.fillText(week, (canvas.width / 2) - (textWidth / 2), 12);
+                    link.href = canvas.toDataURL('image/png');
+                    document.head.removeChild(oldLink);
+                    document.head.appendChild(link);
+                };
+                img.src = 'favicon.png';
+            }
+        })();
+
+        setTimeout(function() { location.reload(); }, 60157000);
+
+        (function(v,e,c,k,a,n,u){v['GoogleAnalyticsObject']=a;v[a]=v[a]||function(){
+        (v[a].q=v[a].q||[]).push(arguments)},v[a].l=1*new Date();n=e.createElement(c),
+            u=e.getElementsByTagName(c)[0];n.async=1;n.src=k;u.parentNode.insertBefore(n,u)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-50793010-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

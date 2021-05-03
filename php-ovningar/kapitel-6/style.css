@@ -1,0 +1,23 @@
+.container {
+    width: 600px;
+    margin-top: 20px;
+    padding: 2em 1em;
+    background: #FFF;
+    border: 1px solid #BBB;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #999;
+}
+table, td {
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+thead, tfoot {
+    background-color: #333;
+    color: #fff;
+}
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}

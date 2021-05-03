@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Globala vs lokala Variabler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="rep.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Globala vs lokala Variabler</h1>
+        <label>Lösenord <input type="password" class="lösen1" required></label>
+        <button class="btn btn-primary">Spara första lösenordet</button>
+        <label>Upprepa lösenord <input type="password" class="lösen2" required></label>
+        <button class="btn btn-warning">Kontrollera lösenorden</button>
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+        // Koden som körs först
+        // Element som vi behöver komma åt
+        const rutaAnamn = document.querySelector(".anamn");
+        const rutaLösen = document.querySelector(".lösen");
+        const knappKontroll = document.querySelector(".btn-warning");
+        const knappDemo = document.querySelector(".btn-info");
+        const knappSpara = document.querySelector(".btn-primary");
+        const knappTöm = document.querySelector(".btn-danger");
+        const rutaSvar = document.querySelector("textarea");
+
+        // Skapa en global variabel
+        var lösen1;
+
+        // Kod som körs när användaren klickar på knappen spara lösenordet
+        knappSpara.addEventListener("click", function() {
+            
+            // Läs av lösenordet och lagra i globala variabeln
+            lösen1 = 
+
+            // Skriv ut lösenordet i loggen
+
+            // Om lösenordet är kortare än 6 tecken skriv ut svaret
+            // https://devdocs.io/javascript/global_objects/string/length
+            // lösen1.length ger längden, dvs antal tecken
+            // Lösenordet för kort 
+            // Annars lösenordet ok
+        })
+
+        // Kod som körs när användaren klickar på knappen Kontrollera lösenordet
+
+            // Läs av lösenordet och lagra lokala variabeln
+            var lösen2 =
+
+            // Skriv ut lösenordet i loggen
+
+            // Om lösenordet är lika med första lösenordet skriv ut en rad till:
+            // "Lösenorden stämmer"
+
+    </script>
+</body>
+</html>

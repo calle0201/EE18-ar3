@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulär</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulär</h1>
+        <form action="taemot.php" method="POST">
+            <label for="anamn">Ange användarnamn</label>
+            <input id="anamn" class="form-control" type="text" name="anamn">
+            <label for="pass">Ange lösenord</label>
+            <input id="pass" class="form-control" type="password" name="pass">
+
+
+            <label>Roll</label>
+            <div>
+                <input type="radio" name="roll" value="student"> Student
+                <input type="radio" name="roll" value="lärare"> Lärare
+            </div>
+
+            <label for="språk">Språk</label>
+            <select class="form-control" name="språk" id="språk">
+                <option value="sv">Svenska</option>
+                <option value="fi">Finska</option>
+                <option value="en">Engelska</option>
+            </select>
+
+            <label for="anmark">Anmärkning</label>
+            <textarea id="anmark" class="form-control" name="anmark"></textarea>
+
+            <button type="submit" class="btn btn-primary">Skicka</button>
+        </form>
+    </div>
+</body>
+</html>

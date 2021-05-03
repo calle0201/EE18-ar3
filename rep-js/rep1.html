@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Variabler och funktioner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Variabler och funktioner</h1>
+        <label>Användarnamn <input type="text" class="anamn" required></label>
+        <label>Lösenord <input type="password" class="lösen" required></label>
+        <button class="btn btn-primary">Logga in</button>
+        <button class="btn btn-warning">Kontrollera lösenordet</button>
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+        // Koden som körs först
+        // Element som vi behöver komma åt
+        const rutaAnamn = document.querySelector(".anamn");
+        const rutaLösen = document.querySelector(".lösen");
+        const knappKontroll = document.querySelector(".btn-warning");
+        const knappDemo = document.querySelector(".btn-info");
+        const knappLoggaIn = document.querySelector(".btn-primary");
+        const knappTöm = document.querySelector(".btn-danger");
+        const rutaSvar = document.querySelector("textarea");
+
+        // Kod som körs när användaren klickar på knappen Logga in
+        knappLoggaIn.addEventListener("click", function () {
+            // Läs av användarnamnet och lägg i en variabel
+            var anamn = rutaAnamn.value;
+            
+            // Läs av lösenordet och lägg i en variabel
+            var lösen = rutaLösen.value;
+
+            // Skapa en variabel svar med innehållet:
+            // "Hej ... ditt lösenord är ..."
+            var svar = "Hej " + namn + " ditt lösenord är" + lösen;
+
+            // Skriv ut svar i rutaSvar
+
+        })
+    </script>
+</body>
+</html>
