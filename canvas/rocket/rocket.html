@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas grunder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotorn
+        var ctx = eCanvas.getContext("2d");
+
+        // Rita ut en bild
+        // Bild från https://iconarchive.com
+        // Steg 1: ladda in bilden
+        var moon = new Image();
+        var rocket = new Image();
+        moon.src = "./moon.jpg";
+        rocket.src = "./rocket-icon.png";
+
+        // Animationsloopen
+        var rocketX = 370, rocketY = 350;
+        var speed = 2;
+        function loopen() {
+            // Suddar ut canvas
+            ctx.clearRect(0, 0, 800, 600);
+
+            // Ritar ut grafiken
+            ctx.drawImage(moon, 0, 0);
+            ctx.drawImage(rocket, rocketX, rocketY);
+
+            // Ändra positionen på raketen
+            rocketY -= speed;
+
+            // Öka hastigheten = accelerationen
+            speed += 0.1;
+            requestAnimationFrame(loopen);
+        }
+        loopen();
+
+    </script>
+</body>
+</html>

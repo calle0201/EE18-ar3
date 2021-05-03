@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas grunder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotorn
+        var ctx = eCanvas.getContext("2d");
+
+        // Rita ut en bild
+        // Bild från https://iconarchive.com
+        // Steg 1: ladda in bilden
+        var bild1 = new Image();
+        var bild2 = new Image();
+        bild1.src = "./Chain-Chomp-icon.png";
+        bild2.src = "./Flower-Fire-icon.png";
+
+        // Animationsloopen
+        var x1 = 0, y1 = 0;
+        var x2 = 0, y2 = 400;
+        function loopen() {
+            // Suddar ut canvas
+            ctx.clearRect(0, 0, 800, 600);
+
+            // Ritar ut figur
+            ctx.drawImage(bild1, x1, y1);
+            ctx.drawImage(bild2, x2, y2);
+
+            // Ändra positionen på figur 1 i x-led
+            x1 += 5;
+            y1 += 1;
+            // Ändra positionen på figur 2 i x-led
+            x2 += 5;
+            y2 -= 2;
+            requestAnimationFrame(loopen);
+        }
+        loopen();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas grunder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotorn
+        var ctx = eCanvas.getContext("2d");
+
+        // Rita mussepigs huvud
+        function ritaMussepig(x, y) {
+            // Rita huvudet som en hel cirkel
+            ctx.beginPath();
+            ctx.fillStyle = "#000";
+            ctx.arc(x, y, 100, 0, 2 * Math.PI);
+            ctx.fill();
+
+            // Rita öronen
+            ctx.beginPath();
+            ctx.arc(x - 80, y - 80, 50, 0, 2 * Math.PI);
+            ctx.arc(x + 80, y - 80, 50, 0, 2 * Math.PI);
+            ctx.fill();
+
+            // Rita ögonen
+            ctx.beginPath();
+            ctx.fillStyle = "#FFF";
+            ctx.ellipse(x - 40, y - 20, 25, 35, 0, 0, 2 * Math.PI);
+            ctx.ellipse(x + 40, y - 20, 25, 35, 0, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+        // Animation mha loopen
+        var musseX = 0, musseY = 200;
+        function loopen() {
+            // Suddar ut canvas
+            ctx.clearRect(0, 0, 800, 600);
+
+            ritaMussepig(musseX, musseY);
+
+            // Ändra positionen
+            musseX += 2;
+
+            requestAnimationFrame(loopen);
+        }
+        loopen();
+    </script>
+</body>
+</html>

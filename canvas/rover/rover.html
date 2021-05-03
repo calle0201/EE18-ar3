@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas grunder</title>
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotorn
+        var ctx = eCanvas.getContext("2d");
+
+        // Ladda bilderna
+        var rover = new Image();
+        rover.src = "./rover.png";
+        var roverX = 400;
+        var roverY = 100;
+
+        // Lyssna på piltangenterna
+        window.addEventListener("keydown", function (e) {
+            console.log(e.key);
+            switch (e.key) {
+                case "ArrowRight":
+                    roverX += 1;
+                    break;
+                case "ArrowLeft":
+                    roverX -= 1;
+                    break;
+                case "ArrowDown":
+                    roverY += 1;
+                    break;
+                case "ArrowUp":
+                    roverY -= 1;
+                    break;
+            }
+        })
+
+        // Animationsloopen 60fps
+        function loopen() {
+            // Suddar ut canvas
+            ctx.clearRect(0, 0, 800, 600);
+
+            // Rita ut rover
+            ctx.drawImage(rover, roverX, roverY, 100, 100);
+
+            requestAnimationFrame(loopen);
+        }
+        loopen();
+    </script>
+</body>
+</html>

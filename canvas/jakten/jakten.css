@@ -1,0 +1,19 @@
+body {
+    background: #000;
+}
+.kontainer {
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+canvas {
+    background: #FFF  url("./bilder/bg.jpg");
+    margin: auto;
+    display: block;
+    /* cursor: none; */
+}
+aside {
+    background: #BBB;
+    padding: 1em;
+}

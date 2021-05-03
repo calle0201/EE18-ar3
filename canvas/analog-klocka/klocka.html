@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas grunder</title>
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotorn
+        var ctx = eCanvas.getContext("2d");
+
+        // Vad är klocka nu?
+        function ritaKlocka() {
+            var now = new Date();
+            var seconds = now.getSeconds();
+            var minutes = now.getMinutes();
+            var hours = now.getHours();
+
+            // Sekundvisare
+            ctx.beginPath();
+            ctx.strokeStyle = "#888";
+            ctx.lineWidth = 10;
+            ctx.arc(400, 300, 100, -Math.PI / 2, 2 * Math.PI / 60 * seconds - Math.PI / 2);
+            ctx.stroke();
+
+            // Minutvisare
+            ctx.beginPath();
+            ctx.strokeStyle = "#555";
+            ctx.lineWidth = 5;
+            ctx.arc(400, 300, 50, -Math.PI / 2, 2 * Math.PI / 60 * minutes - Math.PI / 2);
+            ctx.stroke();
+
+            // Timvisare
+            ctx.beginPath();
+            ctx.strokeStyle = "#333";
+            ctx.lineWidth = 3;
+            ctx.arc(400, 300, 30, -Math.PI / 2, 2 * Math.PI / 12 * (hours % 12) - Math.PI / 2);
+            ctx.stroke();
+        }
+
+        // Animationsloopen 60fps
+        function loopen() {
+            // Suddar ut canvas
+            ctx.clearRect(0, 0, 800, 600);
+
+            // Rita ut sekunder
+            ritaKlocka();
+
+            requestAnimationFrame(loopen);
+        }
+        loopen();
+    </script>
+</body>
+</html>

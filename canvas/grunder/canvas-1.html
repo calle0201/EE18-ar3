@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas grunder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas width="800" height="600"></canvas>
+    <script>
+        // Element vi använder
+        const eCanvas = document.querySelector("canvas");
+
+        // Slå på ritmotorn
+        var ctx = eCanvas.getContext("2d");
+
+        // Rita en fylld rektangel
+        ctx.fillStyle = "lightgreen";
+        ctx.fillRect(300, 250, 200, 100);
+
+        // Rita en tom fyrkant
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = "5";
+        ctx.strokeRect(100, 100, 50, 50);
+
+        // Rita ut en bild
+        // Bild från https://iconarchive.com
+        // Steg 1: ladda in bilden
+        var bild = new Image();
+        bild.src = "./Chain-Chomp-icon.png";
+        // Steg 2: rita ut bilden
+        bild.addEventListener("load", function () {
+            ctx.drawImage(bild, 200, 400);
+        });
+
+    </script>
+</body>
+</html>
